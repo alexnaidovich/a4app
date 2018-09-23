@@ -1,0 +1,11 @@
+@import '../../shared/styles/vars';
+@import '../../shared/styles/glitch';
+
+.glitch {
+    font-size: 11em;
+    span {
+        display: inline-block;
+        @include textGlitch("hello-glitch", 17, $olive, $black, $brown, $green, 450, 115);
+    }
+    
+}

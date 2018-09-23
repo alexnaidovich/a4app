@@ -5,8 +5,6 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
-import { AboutComponent } from './components/about/about.component';
 
 import { DataService } from './services/data.service';
 import { NavSidebarComponent } from './components/nav-sidebar/nav-sidebar.component';
@@ -14,15 +12,12 @@ import { TriviaComponent } from './components/trivia/trivia.component';
 import { WorksComponent } from './components/works/works.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 const appRoutes: Routes = [
     {
         path: '',
-        component: UserComponent
-    },
-    {
-        path: 'about',
-        component: AboutComponent
+        component: WelcomeComponent
     },
     {
         path: 'trivia',
@@ -45,13 +40,12 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    AboutComponent,
     NavSidebarComponent,
     TriviaComponent,
     WorksComponent,
     BlogComponent,
-    ContactComponent
+    ContactComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
