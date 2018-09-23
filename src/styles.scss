@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+// variables
+@import './app/shared/styles/vars';
+@import './app/shared/styles/flex';
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: $main-font;
+    color: $olive;
+    background-color: $black;
+    @include flex(center, center, n, n);
+}
+
+html * { 
+    box-sizing: border-box;
+    *::before, *::after {
+        box-sizing: inherit;
+    }
+}
+
+.h-small { font-size: .6em; text-align: center; }
+
+.active-nav-link {
+    color: darken($green, 10);
+}
+
+
+@import './app/components/user/user.component';

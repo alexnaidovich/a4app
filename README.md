@@ -1,4 +1,6 @@
-# A4app
+# A6app@alexnaidovich
+
+Source code for [my page](https://alexnaidovich.github.io).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 

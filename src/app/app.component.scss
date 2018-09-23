@@ -1,0 +1,15 @@
+@import './shared/styles/vars';
+@import './shared/styles/flex';
+
+// Global styles here
+
+:host {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 100%;
+    @include flex(space-between, center, row-reverse, n);
+}
