@@ -1,11 +1,29 @@
 @import '../../shared/styles/vars';
 @import '../../shared/styles/glitch';
 
+.container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+
 .glitch {
-    font-size: 11em;
+    font-size: 8em;
+    position: absolute;
+    font-weight: bold;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     span {
         display: inline-block;
         @include textGlitch("hello-glitch", 17, $olive, $black, $brown, $green, 450, 115);
+        cursor: default;
+        &[data-text=":)"] {
+            transition: transform .3s ease-in-out;
+            &:hover {
+                transform: rotateZ(90deg);
+            }
+        }
     }
     
 }

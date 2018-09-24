@@ -5,6 +5,10 @@
 @import './app/shared/styles/vars';
 @import './app/shared/styles/flex';
 
+html {
+    font-size: 22px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -24,11 +28,37 @@ html * {
     }
 }
 
+table {
+    border-collapse: collapse;
+}
+
+td {    
+    border: 0;
+    border-bottom: rgba($color: $olive, $alpha: .7);
+}
+
 .h-small { font-size: .6em; text-align: center; }
 
 .active-nav-link {
-    color: darken($green, 10);
+    color: $olive !important;
+    &::before {
+        transform: scaleX(1) !important;
+    }
 }
 
+.main {
+    width: 870px;
+    max-height: 90vh;
+    min-height: 90vh;
+}
 
-@import './app/components/user/user.component';
+.row {
+    width: 100%;
+    display: flex;
+}
+.c-1-3 { width: 33%; }
+.c-2-3 { width: 67%; }
+.c-1-2 { width: 50%; }
+.bold { font-weight: bold; }
+.flex { display: flex; }
+.wrap { flex-wrap: wrap; }

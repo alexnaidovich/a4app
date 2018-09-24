@@ -1,3 +1,48 @@
-<p>
-  trivia works!
-</p>
+<main class="trivia">
+    <h2>trivia</h2>
+    <section class="content trivia--content">
+
+        <div class="row">
+            <div class="c-1-3">known as</div>
+            <div class="c-2-3 bold">{{me.name}}</div>
+        </div>
+
+        <div class="row">
+            <div class="c-1-3 flex">
+                <div class="c-1-3">age</div>
+                <div class="c-2-3 bold">{{me.age}}</div>
+            </div>
+            <div class="c-2-3 flex">
+                <div class="c-1-3">born</div>
+                <div class="c-2-3 bold">{{me.renderDate}}</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="c-1-3">graduate</div>
+            <div class="c-2-3 bold">{{me.graduate}}</div>
+        </div>
+
+        <div class="row">
+            <div class="c-1-3">courses</div>
+            <div class="c-2-3 bold">
+                <ul>
+                    <li *ngFor="let course of me.courses">{{course}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="c-1-3">experience</div>
+            <div class="c-2-3 bold">{{me.exp}}</div>
+        </div>
+
+        <div class="row">
+            <div class="c-1-3">stack</div>
+            <div class="c-2-3 flex wrap">
+                <span *ngFor="let item of me.stack" class="skill">{{item}}</span>
+            </div>
+        </div>
+        
+    </section>
+</main>

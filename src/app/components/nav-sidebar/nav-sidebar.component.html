@@ -1,15 +1,19 @@
 <nav class="nav-sidebar">
-    <a [routerLink]="['/']">
+    <a routerLink="/">
         <h1>alexnaidovich<br><span class="h-small">
             web developer
         </span></h1>
     </a>
 
     <ul>
-        <li><a [routerLink]="['/trivia']" routerLinkActive=".active-nav-link">trivia</a></li>
-        <li><a [routerLink]="['/works']" routerLinkActive=".active-nav-link">works</a></li>
-        <li><a [routerLink]="['/blog']" routerLinkActive=".active-nav-link">blog</a></li>
-        <li><a [routerLink]="['/contact']" routerLinkActive=".active-nav-link">contact</a></li>
+        <li><a routerLink="/trivia" routerLinkActive="active-nav-link"
+            [routerLinkActiveOptions]="{ exact: false, __change_detection_hack__: id }">trivia</a></li>
+        <li><a routerLink="/works" routerLinkActive="active-nav-link"
+            [routerLinkActiveOptions]="{ exact: false, __change_detection_hack__: id }">works</a></li>
+        <li><a routerLink="/blog" routerLinkActive="active-nav-link"
+            [routerLinkActiveOptions]="{ exact: false, __change_detection_hack__: id }">blog</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active-nav-link"
+            [routerLinkActiveOptions]="{ exact: false, __change_detection_hack__: id }">contact</a></li>
     </ul>
     
     <small>powered by <a href="https://angular.io/" target="_blank">ng6</a></small>
